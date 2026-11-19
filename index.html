@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLN MADHU H R | Online Service Center</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#071b35;
+--blue:#0878d1;
+--gold:#ffc857;
+--light:#f3f7fc;
+--white:#fff;
+--text:#1d2c3b;
+--muted:#718096;
+}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
+}
+header{
+background:linear-gradient(120deg,#06182e,#075fa8);
+color:white;padding:17px 5%;
+display:flex;align-items:center;
+justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+width:53px;height:53px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+border-radius:14px;display:grid;
+place-items:center;font-size:28px;
+}
+.brand h2{font-size:23px;letter-spacing:1px}
+.brand small{color:#b8eaff;letter-spacing:2px;font-size:10px}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+button{font-family:inherit;cursor:pointer}
+.navbtn{background:transparent;color:white;border:0;padding:9px 12px;font-weight:bold}
+.btn{border:0;border-radius:8px;padding:12px 19px;font-weight:bold;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--blue);color:white}
+.gold{background:var(--gold);color:#17283c}
+.lightbtn{background:white;color:var(--navy)}
+.danger{background:#ffe3e3;color:#a00000}
+.secondary{background:#e6eff8;color:#123}
+main{width:min(1120px,92%);margin:30px auto 60px;min-height:65vh}
+.page{display:block}
+.hidden{display:none!important}
+.hero{
+background:linear-gradient(120deg,#082443,#087bd0);
+border-radius:20px;padding:55px 40px;color:white;
+display:flex;justify-content:space-between;
+align-items:center;gap:20px;min-height:340px;
+}
+.hero-content{max-width:700px}
+.hero h1{font-size:clamp(30px,5vw,49px);line-height:1.2;margin:13px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#e1efff;margin-bottom:23px}
+.hero-art{font-size:110px}
+.eyebrow{color:#0784d4;font-size:12px;font-weight:bold;letter-spacing:2px}
+.hero .eyebrow{color:var(--gold)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.section{margin-top:45px}
+.section-title{margin-bottom:20px}
+.section-title h1,.section-title h2{color:var(--navy);margin:5px 0}
+.section-title p{color:var(--muted)}
+.panel,.about-card,.auth-card,.profile-card{
+background:white;padding:26px;border-radius:14px;
+border:1px solid #e3eaf2;box-shadow:0 5px 20px #102b4510;
+}
+.about-card p+p{margin-top:14px}
+.muted{color:var(--muted)}
+.service-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:17px;
+}
+.service-card{
+background:white;border:1px solid #e1eaf3;border-radius:14px;
+padding:22px;box-shadow:0 4px 15px #102b4509;transition:.2s;
+}
+.service-card:hover{transform:translateY(-4px)}
+.service-icon{font-size:38px;margin-bottom:10px}
+.service-card h3{color:var(--navy);margin-bottom:7px}
+.service-card p{font-size:14px;color:var(--muted);margin-bottom:15px}
+.service-card button{
+background:#e7f3ff;color:#075da5;border:0;
+padding:9px 13px;border-radius:7px;font-weight:bold;
+}
+.contact{
+margin-top:35px;padding:25px;border-radius:14px;
+background:#e5f2ff;display:flex;justify-content:space-between;
+align-items:center;gap:15px;flex-wrap:wrap;
+}
+.auth-card{max-width:490px;margin:20px auto}
+.auth-card.wide{max-width:620px}
+.auth-card h2{color:var(--navy)}
+.auth-icon{font-size:42px;margin-bottom:8px}
+label{display:block;font-size:14px;font-weight:bold;margin:14px 0 5px}
+input,select,textarea{
+width:100%;padding:12px;border:1px solid #ccd8e4;
+border-radius:8px;font:inherit;background:white;
+}
+input:focus,select:focus,textarea:focus{
+outline:2px solid #9bd4ff;border-color:var(--blue);
+}
+.full{width:100%;margin-top:18px}
+.center{text-align:center}
+.textbtn{
+background:transparent;color:#0878c9;
+border:0;font-weight:bold;text-decoration:underline;
+}
+.back{margin-top:20px;background:transparent;border:0;color:#0878c9;font-weight:bold}
+.policy-check{
+display:flex;gap:9px;align-items:flex-start;margin-top:17px;font-size:13px;
+}
+.policy-check input{width:18px;margin-top:5px}
+.notice{
+background:#fff4d8;color:#74520a;
+padding:13px;border-radius:9px;font-size:13px;margin:16px 0;
+}
+.dashboard-top,.between{
+display:flex;justify-content:space-between;
+align-items:center;gap:15px;flex-wrap:wrap;
+}
+.dashboard-top{margin-bottom:20px}
+.dashboard-top h1{color:var(--navy)}
+.profile-card{margin-bottom:30px}
+.profile-card p{color:var(--muted)}
+.request-item{border-bottom:1px solid #e5edf3;padding:15px 0}
+.request-item:last-child{border:0}
+.request-item strong{color:var(--navy)}
+.request-item small{display:block;color:var(--muted)}
+.policy-panel h1,.policy-panel h2{color:var(--navy);margin-bottom:15px}
+.policy-panel h3{margin:18px 0 7px}
+.policy-panel p,.policy-panel li{margin-bottom:10px}
+.policy-panel ul,.policy-panel ol{padding-left:24px}
+footer{
+background:var(--navy);color:white;text-align:center;padding:32px 15px;
+}
+footer p{color:#c9dcec;font-size:14px}
+.footer-links{
+display:flex;justify-content:center;
+gap:15px;flex-wrap:wrap;margin:17px;
+}
+.footer-links button{background:transparent;color:#a9e3ff;border:0}
+footer small{color:#a9bed0}
+.toast{
+display:none;position:fixed;right:20px;bottom:20px;
+background:#102b45;color:white;padding:14px 19px;
+border-radius:9px;max-width:350px;z-index:1000;
+}
+.toast.show{display:block}
+.success-box{
+background:#e7f7ec;border:1px solid #b8e3c4;
+padding:18px;border-radius:12px;margin-top:20px;
+}
+.success-box h3{color:#176b35;margin-bottom:5px}
+.success-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+@media(max-width:700px){
+header{padding:15px}
+.brand h2{font-size:18px}
+nav{width:100%}
+.navbtn{padding:7px}
+.hero{padding:28px 22px}
+.hero-art{display:none}
+.auth-card{padding:21px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+<div class="logo">💻</div>
+<div>
+<h2>SLN MADHU H R</h2>
+<small>ONLINE SERVICE CENTER</small>
+</div>
+</div>
+
+<nav>
+<button class="navbtn" onclick="showPage('home')">Home</button>
+<button class="navbtn" onclick="showPage('about')">About</button>
+<button class="navbtn" onclick="showPage('services')">Services</button>
+<button class="btn gold" id="loginNav" onclick="showPage('login')">Login</button>
+<button class="btn gold hidden" id="dashboardNav" onclick="showPage('dashboard')">Dashboard</button>
+</nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+
+<section id="homePage" class="page">
+
+<div class="hero">
+<div class="hero-content">
+<div class="eyebrow">YOUR DIGITAL SERVICE PARTNER</div>
+<h1>Welcome to <span>SLN MADHU H R</span></h1>
+<p>Your trusted destination for online applications, certificate assistance and digital services.</p>
+<div class="actions">
+<button class="btn gold" onclick="showPage('services')">Explore Services</button>
+<button class="btn lightbtn" onclick="showPage('login')">Customer Login</button>
+</div>
+</div>
+<div class="hero-art">🏛️</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<div class="eyebrow">ABOUT OUR CENTER</div>
+<h2>About SLN MADHU H R</h2>
+</div>
+
+<div class="about-card">
+<p>SLN MADHU H R Online Service Center provides assistance with online applications, certificate services, student applications and other digital services.</p>
+<p>Customers can explore services without logging in. Registered customers can submit service requests and view their requests.</p>
+<p class="muted">We are an independent service assistance center and are not an official government department.</p>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">
+<div class="eyebrow">OUR SERVICES</div>
+<h2>What We Provide</h2>
+</div>
+<div class="service-grid" id="homeServices"></div>
+</div>
+
+<div class="contact">
+<div>
+<h2>Ready to use our services?</h2>
+<p>Create your customer account.</p>
+</div>
+<button class="btn primary" onclick="showPage('register')">Create Account</button>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="aboutPage" class="page hidden">
+<div class="section-title">
+<div class="eyebrow">ABOUT US</div>
+<h1>About Our Service Center</h1>
+</div>
+<div class="panel">
+<h2>SLN MADHU H R Online Service Center</h2>
+<p>We provide assistance for selected online applications, government-related application processes, educational applications and digital services.</p>
+<div class="notice">This is an independent service center. We are not an official government portal. Application approval is controlled by the relevant authority.</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="servicesPage" class="page hidden">
+<div class="section-title">
+<div class="eyebrow">SERVICE CATEGORIES</div>
+<h1>Our Available Services</h1>
+<p>View our services without logging in.</p>
+</div>
+<div class="service-grid" id="allServices"></div>
+<div class="notice">Please log in to submit a service request.</div>
+<button class="btn primary" onclick="showPage('login')">Login to Continue</button>
+</section>
+
+<!-- LOGIN -->
+
+<section id="loginPage" class="page hidden">
+<div class="auth-card">
+<div class="auth-icon">🔐</div>
+<h2>Customer Login</h2>
+<p class="muted">Login to access your services.</p>
+
+<form id="loginForm">
+<label>Mobile Number</label>
+<input id="loginMobile" maxlength="10" inputmode="numeric" pattern="[0-9]{10}" required placeholder="Enter mobile number">
+
+<label>Password</label>
+<input id="loginPassword" type="password" required placeholder="Enter password">
+
+<button class="btn primary full" type="submit">Login</button>
+</form>
+
+<div class="center" style="margin-top:18px">
+<button class="textbtn" onclick="showPage('forgot')">Forgot Password?</button>
+<p style="margin-top:12px">
+New customer?
+<button class="textbtn" onclick="showPage('register')">Create Account</button>
+</p>
+</div>
+
+<button class="back" onclick="showPage('home')">← Back to Home</button>
+</div>
+</section>
+
+<!-- REGISTER -->
+
+<section id="registerPage" class="page hidden">
+<div class="auth-card wide">
+<div class="auth-icon">👤</div>
+<h2>Create New Account</h2>
+<p class="muted">Register and set your security question.</p>
+
+<form id="registerForm">
+
+<label>Full Name</label>
+<input id="regName" required maxlength="100" placeholder="Enter your full name">
+
+<label>Mobile Number</label>
+<input id="regMobile" required maxlength="10" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile number">
+
+<label>Email Address</label>
+<input id="regEmail" type="email" required placeholder="Enter email address">
+
+<label>Create Password</label>
+<input id="regPassword" type="password" minlength="8" required placeholder="Minimum 8 characters">
+
+<label>Confirm Password</label>
+<input id="regConfirm" type="password" minlength="8" required placeholder="Confirm password">
+
+<label>Security Question</label>
+<select id="securityQuestion" required>
+<option value="">Choose security question</option>
+<option>What is the name of your first school?</option>
+<option>What is your childhood nickname?</option>
+<option>What is the name of your favourite teacher?</option>
+<option>What was the first place you visited?</option>
+</select>
+
+<label>Security Answer</label>
+<input id="securityAnswer" required maxlength="100" placeholder="Enter your answer">
+
+<div class="policy-check">
+<input type="checkbox" id="acceptPolicy" required>
+<span>
+I agree to the
+<button type="button" class="textbtn" onclick="showPage('privacy')">Privacy Policy</button>
+and
+<button type="button" class="textbtn" onclick="showPage('terms')">Terms & Conditions</button>.
+</span>
+</div>
+
+<button class="btn primary full" type="submit">Create Account</button>
+</form>
+
+<p class="center" style="margin-top:18px">
+Already have an account?
+<button class="textbtn" onclick="showPage('login')">Login</button>
+</p>
+
+<button class="back" onclick="showPage('home')">← Back to Home</button>
+</div>
+</section>
+
+<!-- FORGOT PASSWORD -->
+
+<section id="forgotPage" class="page hidden">
+<div class="auth-card">
+<div class="auth-icon">🔑</div>
+<h2>Reset Password</h2>
+<p class="muted">Verify your registered mobile number and security answer.</p>
+
+<label>Registered Mobile Number</label>
+<input id="recoveryMobile" maxlength="10" inputmode="numeric" placeholder="Enter registered mobile number">
+
+<button class="btn primary full" onclick="verifyRecoveryAccount()">Continue</button>
+
+<div id="securityRecovery" class="hidden">
+
+<label id="recoveryQuestionLabel">Security Question</label>
+<input id="recoveryAnswer" placeholder="Enter your security answer">
+
+<label>New Password</label>
+<input id="recoveryNewPassword" type="password" minlength="8" placeholder="Minimum 8 characters">
+
+<label>Confirm New Password</label>
+<input id="recoveryConfirmPassword" type="password" minlength="8" placeholder="Confirm new password">
+
+<button class="btn primary full" onclick="resetPassword()">Reset Password</button>
+
+</div>
+
+<button class="back" onclick="showPage('login')">← Back to Login</button>
+</div>
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboardPage" class="page hidden">
+
+<div class="dashboard-top">
+<div>
+<div class="eyebrow">CUSTOMER DASHBOARD</div>
+<h1 id="welcomeName">Welcome!</h1>
+<p class="muted">Choose the service you need.</p>
+</div>
+<button class="btn danger" onclick="logout()">Logout</button>
+</div>
+
+<div class="profile-card">
+<h3>My Account</h3>
+<p id="profileMobile"></p>
+<p id="profileEmail"></p>
+</div>
+
+<div class="section-title">
+<h2>What Services Can We Provide?</h2>
+<p>Select a service to submit your request.</p>
+</div>
+
+<div class="service-grid" id="dashboardServices"></div>
+
+<div class="panel section">
+<div class="between">
+<h2>My Service Requests</h2>
+<button class="btn secondary" onclick="loadRequests()">Refresh</button>
+</div>
+<div id="requestHistory" style="margin-top:15px"></div>
+</div>
+
+</section>
+
+<!-- SERVICE REQUEST -->
+
+<section id="requestPage" class="page hidden">
+<div class="auth-card wide">
+<h2 id="requestHeading">Service Request</h2>
+<p class="muted">Submit your service requirements.</p>
+
+<form id="serviceForm">
+
+<label>Service Category</label>
+<input id="serviceCategory" readonly>
+
+<label>Required Service</label>
+<select id="serviceOption" required></select>
+
+<label>Additional Details</label>
+<textarea id="serviceDetails" rows="4" placeholder="Enter necessary details"></textarea>
+
+<div class="notice">
+Do not enter passwords, OTPs, bank PINs or unnecessary sensitive identity information here.
+</div>
+
+<button class="btn primary full" type="submit">Submit Request</button>
+</form>
+
+<div id="notifyOwner" class="success-box hidden">
+<h3>Request Saved Successfully!</h3>
+<p id="requestConfirmation"></p>
+
+<p><b>Send this request to the owner:</b></p>
+
+<div class="success-actions">
+<button class="btn primary" id="sendWhatsApp">Send via WhatsApp</button>
+<button class="btn secondary" id="sendEmail">Send via Email</button>
+</div>
+
+<p class="muted" style="font-size:12px;margin-top:10px">
+Select WhatsApp or Email. Your app will open with the request details. Press Send to notify the owner.
+</p>
+</div>
+
+<button class="back" onclick="showPage('dashboard')">← Back to Dashboard</button>
+</div>
+</section>
+
+<!-- PRIVACY -->
+
+<section id="privacyPage" class="page hidden">
+<div class="panel policy-panel">
+<h1>Privacy Policy</h1>
+<h3>1. Information Collected</h3>
+<p>We may collect your name, mobile number, email address and service request details.</p>
+<h3>2. Use of Information</h3>
+<p>Information is used for account management, service requests and customer communication.</p>
+<h3>3. Data Security</h3>
+<p>This demo stores data in the browser. It is not suitable for real sensitive customer information.</p>
+<h3>4. Information Sharing</h3>
+<p>Information may be shared when necessary for a requested service or where legally required.</p>
+<h3>5. Contact</h3>
+<p>Email: hrmkhrmadhu@gmail.com</p>
+<p>WhatsApp: +91 9180334054</p>
+<button class="btn primary" onclick="showPage('home')">Back to Home</button>
+</div>
+</section>
+
+<!-- TERMS -->
+
+<section id="termsPage" class="page hidden">
+<div class="panel policy-panel">
+<h1>Terms & Conditions</h1>
+<ol>
+<li>Customers must provide correct information.</li>
+<li>This website provides independent online service assistance.</li>
+<li>This center is not an official government department.</li>
+<li>Government authorities decide application approval or rejection.</li>
+<li>Customers should review charges before confirming a service.</li>
+<li>Customers must not share passwords, OTPs or bank PINs.</li>
+<li>Service availability may depend on external government portals.</li>
+<li>Customers must have permission to submit another person's information.</li>
+</ol>
+<button class="btn primary" onclick="showPage('home')">Back to Home</button>
+</div>
+</section>
+
+</main>
+
+<footer>
+<h2>SLN MADHU H R</h2>
+<p>ONLINE SERVICE CENTER</p>
+<p>Online Applications | Digital Services | Certificate Assistance</p>
+<p>WhatsApp: +91 9180334054</p>
+<p>Email: hrmkhrmadhu@gmail.com</p>
+
+<div class="footer-links">
+<button onclick="showPage('about')">About</button>
+<button onclick="showPage('services')">Services</button>
+<button onclick="showPage('privacy')">Privacy Policy</button>
+<button onclick="showPage('terms')">Terms & Conditions</button>
+</div>
+
+<small>Independent service center. Not an official government website.</small>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script>
+
+// OWNER CONTACT DETAILS
+const OWNER_WHATSAPP = "919180334054";
+const OWNER_EMAIL = "hrmkhrmadhu@gmail.com";
+
+// SERVICE CATEGORIES
+
+const SERVICES = [
+{
+name:"PAN Card Services",
+icon:"🪪",
+description:"New PAN, correction and reprint assistance.",
+options:["New PAN Application","PAN Correction","PAN Reprint"]
+},
+{
+name:"Voter ID Services",
+icon:"🗳️",
+description:"New voter registration and corrections.",
+options:["New Voter Registration","Voter ID Correction","Address Change","Voter Status Assistance"]
+},
+{
+name:"Caste & Income Certificates",
+icon:"📜",
+description:"Certificate application assistance.",
+options:["Caste Certificate","Income Certificate","Caste and Income Certificate","Certificate Renewal"]
+},
+{
+name:"Government Applications",
+icon:"🏛️",
+description:"Government recruitment and exam applications.",
+options:["Government Job Application","Police Recruitment Application","Competitive Exam Application","Other Government Application"]
+},
+{
+name:"Ration Card Services",
+icon:"🍚",
+description:"Ration card addition and correction.",
+options:["New Ration Card Assistance","Add Family Member","Ration Card Correction","Ration Card Status"]
+},
+{
+name:"Other Application Services",
+icon:"🎓",
+description:"Scholarship, student bus pass and education applications.",
+options:["Scholarship Application","Student Bus Pass","College Application","University Application","Other Online Application"]
+}
+];
+
+let currentUser = null;
+let selectedService = null;
+let recoveryUser = null;
+let lastRequestMessage = "";
+
+// STORAGE
+
+function readUsers(){
+try{
+return JSON.parse(localStorage.getItem("sln_users") || "[]");
+}catch{
+return [];
+}
+}
+
+function saveUsers(users){
+localStorage.setItem("sln_users",JSON.stringify(users));
+}
+
+function getRequests(){
+try{
+return JSON.parse(localStorage.getItem("sln_requests") || "[]");
+}catch{
+return [];
+}
+}
+
+function saveRequests(requests){
+localStorage.setItem("sln_requests",JSON.stringify(requests));
+}
+
+// MESSAGE
+
+function toast(message){
+const box=document.getElementById("toast");
+box.textContent=message;
+box.classList.add("show");
+setTimeout(()=>box.classList.remove("show"),3500);
+}
+
+// NAVIGATION
+
+function showPage(name){
+
+document.querySelectorAll(".page").forEach(page=>{
+page.classList.add("hidden");
+});
+
+const target=document.getElementById(name+"Page");
+
+if(target){
+target.classList.remove("hidden");
+}
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+if(name==="dashboard"){
+if(!currentUser){
+showPage("login");
+return;
+}
+loadRequests();
+}
+}
+
+// SERVICE DISPLAY
+
+function makeServiceCard(service,mode){
+
+const card=document.createElement("div");
+card.className="service-card";
+
+const icon=document.createElement("div");
+icon.className="service-icon";
+icon.textContent=service.icon;
+
+const heading=document.createElement("h3");
+heading.textContent=service.name;
+
+const description=document.createElement("p");
+description.textContent=service.description;
+
+const button=document.createElement("button");
+
+button.textContent=mode==="dashboard"
+?"Apply for Service →"
+:"View Details";
+
+button.onclick=()=>{
+if(mode==="dashboard"){
+openService(service.name);
+}else{
+showPage("services");
+}
+};
+
+card.append(icon,heading,description,button);
+
+return card;
+}
+
+function renderServices(){
+
+document.getElementById("homeServices").replaceChildren(
+...SERVICES.map(s=>makeServiceCard(s,"public"))
+);
+
+document.getElementById("allServices").replaceChildren(
+...SERVICES.map(s=>makeServiceCard(s,"public"))
+);
+
+document.getElementById("dashboardServices").replaceChildren(
+...SERVICES.map(s=>makeServiceCard(s,"dashboard"))
+);
+}
+
+// REGISTRATION
+
+document.getElementById("registerForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=document.getElementById("regName").value.trim();
+const mobile=document.getElementById("regMobile").value.trim();
+const email=document.getElementById("regEmail").value.trim().toLowerCase();
+const password=document.getElementById("regPassword").value;
+const confirm=document.getElementById("regConfirm").value;
+const question=document.getElementById("securityQuestion").value;
+const answer=document.getElementById("securityAnswer").value.trim().toLowerCase();
+
+if(!/^[0-9]{10}$/.test(mobile)){
+toast("Enter a valid 10-digit mobile number.");
+return;
+}
+
+if(password.length<8){
+toast("Password must have at least 8 characters.");
+return;
+}
+
+if(password!==confirm){
+toast("Passwords do not match.");
+return;
+}
+
+if(!question || !answer){
+toast("Enter your security question and answer.");
+return;
+}
+
+if(!document.getElementById("acceptPolicy").checked){
+toast("Accept the Privacy Policy and Terms.");
+return;
+}
+
+const users=readUsers();
+
+if(users.some(u=>u.mobile===mobile || u.email===email)){
+toast("Mobile number or email is already registered.");
+return;
+}
+
+users.push({
+id:Date.now(),
+name,
+mobile,
+email,
+password,
+question,
+answer,
+createdAt:new Date().toISOString()
+});
+
+saveUsers(users);
+
+this.reset();
+
+toast("Account created successfully. Please login.");
+showPage("login");
+
+});
+
+// LOGIN
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const mobile=document.getElementById("loginMobile").value.trim();
+const password=document.getElementById("loginPassword").value;
+
+const user=readUsers().find(u=>
+u.mobile===mobile && u.password===password
+);
+
+if(!user){
+toast("Invalid mobile number or password.");
+return;
+}
+
+currentUser=user;
+
+sessionStorage.setItem("sln_logged_user",String(user.id));
+
+updateDashboard();
+
+this.reset();
+
+toast("Login successful!");
+
+showPage("dashboard");
+
+});
+
+function updateDashboard(){
+
+if(!currentUser)return;
+
+document.getElementById("welcomeName").textContent=
+"Welcome, "+currentUser.name;
+
+document.getElementById("profileMobile").textContent=
+"Mobile: "+currentUser.mobile;
+
+document.getElementById("profileEmail").textContent=
+"Email: "+currentUser.email;
+
+document.getElementById("loginNav").classList.add("hidden");
+
+document.getElementById("dashboardNav").classList.remove("hidden");
+
+}
+
+// LOGOUT
+
+function logout(){
+
+currentUser=null;
+
+sessionStorage.removeItem("sln_logged_user");
+
+document.getElementById("loginNav").classList.remove("hidden");
+
+document.getElementById("dashboardNav").classList.add("hidden");
+
+toast("Logged out successfully.");
+
+showPage("home");
+
+}
+
+// FORGOT PASSWORD - SECURITY QUESTION
+
+function verifyRecoveryAccount(){
+
+const mobile=document.getElementById("recoveryMobile").value.trim();
+
+if(!/^[0-9]{10}$/.test(mobile)){
+toast("Enter a valid mobile number.");
+return;
+}
+
+recoveryUser=readUsers().find(u=>u.mobile===mobile) || null;
+
+if(!recoveryUser){
+toast("No account found for this mobile number.");
+return;
+}
+
+document.getElementById("recoveryQuestionLabel").textContent=
+recoveryUser.question;
+
+document.getElementById("securityRecovery").classList.remove("hidden");
+
+toast("Answer your registered security question.");
+
+}
+
+// RESET PASSWORD
+
+function resetPassword(){
+
+if(!recoveryUser){
+toast("Verify your mobile number first.");
+return;
+}
+
+const answer=document.getElementById("recoveryAnswer").value.trim().toLowerCase();
+
+const password=document.getElementById("recoveryNewPassword").value;
+
+const confirm=document.getElementById("recoveryConfirmPassword").value;
+
+if(answer!==recoveryUser.answer){
+toast("Incorrect security answer.");
+return;
+}
+
+if(password.length<8){
+toast("Password must have at least 8 characters.");
+return;
+}
+
+if(password!==confirm){
+toast("Passwords do not match.");
+return;
+}
+
+const users=readUsers();
+
+const index=users.findIndex(u=>u.id===recoveryUser.id);
+
+if(index===-1){
+toast("Account not found.");
+return;
+}
+
+users[index].password=password;
+
+saveUsers(users);
+
+recoveryUser=null;
+
+document.getElementById("recoveryMobile").value="";
+document.getElementById("recoveryAnswer").value="";
+document.getElementById("recoveryNewPassword").value="";
+document.getElementById("recoveryConfirmPassword").value="";
+
+document.getElementById("securityRecovery").classList.add("hidden");
+
+toast("Password reset successfully. Please login.");
+
+showPage("login");
+
+}
+
+// OPEN SERVICE
+
+function openService(name){
+
+if(!currentUser){
+toast("Please login first.");
+showPage("login");
+return;
+}
+
+selectedService=SERVICES.find(s=>s.name===name);
+
+if(!selectedService)return;
+
+document.getElementById("requestHeading").textContent=
+selectedService.name;
+
+document.getElementById("serviceCategory").value=
+selectedService.name;
+
+const select=document.getElementById("serviceOption");
+
+select.innerHTML='<option value="">Select your service</option>';
+
+selectedService.options.forEach(option=>{
+
+const item=document.createElement("option");
+
+item.value=option;
+item.textContent=option;
+
+select.appendChild(item);
+
+});
+
+document.getElementById("serviceDetails").value="";
+
+document.getElementById("serviceForm").classList.remove("hidden");
+
+document.getElementById("notifyOwner").classList.add("hidden");
+
+showPage("request");
+
+}
+
+// SUBMIT REQUEST
+
+document.getElementById("serviceForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+if(!currentUser){
+toast("Please login again.");
+showPage("login");
+return;
+}
+
+const type=document.getElementById("serviceOption").value;
+
+const details=document.getElementById("serviceDetails").value.trim();
+
+if(!selectedService || !type){
+toast("Select your required service.");
+return;
+}
+
+const requests=getRequests();
+
+const id="SLN-"+String(Date.now()).slice(-8);
+
+const date=new Date().toLocaleString();
+
+const request={
+id,
+userId:currentUser.id,
+service:selectedService.name,
+type,
+details,
+date
+};
+
+requests.unshift(request);
+
+saveRequests(requests);
+
+// OWNER MESSAGE
+
+lastRequestMessage=
+`NEW SERVICE REQUEST - SLN MADHU H R
+
+Reference: ${id}
+
+Customer: ${currentUser.name}
+
+Mobile: ${currentUser.mobile}
+
+Email: ${currentUser.email}
+
+Service Category: ${selectedService.name}
+
+Required Service: ${type}
+
+Details: ${details || "Not provided"}
+
+Submitted: ${date}`;
+
+// SHOW NOTIFICATION OPTIONS
+
+document.getElementById("requestConfirmation").textContent=
+"Reference: "+id+". Choose WhatsApp or Email below.";
+
+document.getElementById("notifyOwner").classList.remove("hidden");
+
+document.getElementById("serviceForm").classList.add("hidden");
+
+// WHATSAPP BUTTON
+
+document.getElementById("sendWhatsApp").onclick=function(){
+
+const url=
+"https://wa.me/"+OWNER_WHATSAPP+
+"?text="+encodeURIComponent(lastRequestMessage);
+
+window.open(url,"_blank","noopener");
+
+};
+
+// EMAIL BUTTON
+
+document.getElementById("sendEmail").onclick=function(){
+
+const subject="New Service Request "+id;
+
+const url=
+"mailto:"+OWNER_EMAIL+
+"?subject="+encodeURIComponent(subject)+
+"&body="+encodeURIComponent(lastRequestMessage);
+
+window.location.href=url;
+
+};
+
+toast("Request saved. Choose WhatsApp or Email.");
+
+loadRequests();
+
+});
+
+// REQUEST HISTORY
+
+function loadRequests(){
+
+if(!currentUser)return;
+
+const box=document.getElementById("requestHistory");
+
+const requests=getRequests().filter(
+r=>r.userId===currentUser.id
+);
+
+box.innerHTML="";
+
+if(requests.length===0){
+box.textContent="No service requests submitted yet.";
+return;
+}
+
+requests.forEach(request=>{
+
+const item=document.createElement("div");
+item.className="request-item";
+
+const title=document.createElement("strong");
+title.textContent=request.service;
+
+const type=document.createElement("p");
+type.textContent=request.type;
+
+const reference=document.createElement("small");
+reference.textContent="Reference: "+request.id;
+
+const date=document.createElement("small");
+date.textContent="Submitted: "+request.date;
+
+item.append(title,type,reference,date);
+
+box.appendChild(item);
+
+});
+
+}
+
+// RESTORE LOGIN
+
+function restoreLogin(){
+
+const id=sessionStorage.getItem("sln_logged_user");
+
+if(!id)return;
+
+const user=readUsers().find(u=>String(u.id)===id);
+
+if(user){
+currentUser=user;
+updateDashboard();
+}
+}
+
+// INITIALIZE
+
+renderServices();
+
+restoreLogin();
+
+showPage("home");
+
+</script>
+</body>
+</html>
